@@ -1,8 +1,10 @@
 <% layout('../layout.html') -%>
-<h1>Check out my products!!</h1>
+<div class="page-header">
+  <h1>&nbsp;Check it out! <small>Awesome products!</small></h1>
+</div>
 <div ng-controller="ProductCtrl">
 	<form ng-submit="save(newRecord)">
-		<table cellspacing="0">
+		<table class="table table-striped">
 			<tr>
 				<th>ID</th>
 				<th>Category</th>
@@ -25,5 +27,16 @@
 				<td><a ng-click="delete(index)">Delete</a></td>
 			</tr>	
 		</table>
+		<div align="center" class="pagination">
+		  <ul>
+		    <li><a href="#">Prev</a></li>
+		    <li><a href="#">1</a></li>
+		    <li><a href="#">2</a></li>
+		    <li><a href="#">3</a></li>
+		    <li><a href="#">4</a></li>
+		    <li><a href="#">5</a></li>
+		    <li><a href="#">Next</a></li>
+		  </ul>
+		</div>
 	</form>	
 </div>
