@@ -1,0 +1,42 @@
+
+<!-- partials/list -->
+
+<div class="container-fluid">
+  <h1>&nbsp;Cool!! <small>Check these out!</small></h1>
+</div>
+<div ng-controller="ProductCtrl">
+	<form ng-submit="save(newRecord)">
+		<table class="table table-condensed table-striped">
+			<tr>
+				<th>ID</th>
+				<th>Category</th>
+				<th>Title</th>	
+				<th>Action</th>	
+			</tr>	
+			<tr>
+				<th><input ng-model="newRecord.id" placeholder="ID"></th>
+				<th><input ng-model="newRecord.category" placeholder="Category"></th>
+				<th><input ng-model="newRecord.title" placeholder="Title"></th>					
+				<th><input type="submit" value="Add"></th>	
+			</tr>
+			<tr ng-repeat="(index, row) in products">
+				<td>{{row.id}}</td>
+				<td>{{row.category}}</td>
+				<td>{{row.title}}</td>					
+				<td><a ng-click="delete(index)">Delete</a></td>
+			</tr>	
+		</table>
+		<!-- TODO -->
+		<div align="center" class="pagination">
+		  <ul>
+		    <li><a href="#">Prev</a></li>
+		    <li><a href="#">1</a></li>
+		    <li><a href="#">2</a></li>
+		    <li><a href="#">3</a></li>
+		    <li><a href="#">4</a></li>
+		    <li><a href="#">5</a></li>
+		    <li><a href="#">Next</a></li>
+		  </ul>
+		</div>
+	</form>	
+</div>
