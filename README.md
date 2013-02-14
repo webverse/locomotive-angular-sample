@@ -7,7 +7,6 @@
 
 	@author
 	Fabio Favero Henkes
-
 	_______________________________________________________________
 
 	Info.:
@@ -20,8 +19,8 @@
 
 	4 - Run the follow commands:
 
-	$ npm install
+		$ npm install
 
-	$ lcm server
+		$ lcm server
 
 	5 - Open in a browser: http://localhost:3000/

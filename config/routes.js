@@ -7,10 +7,11 @@
 // information.
 module.exports = function routes() {
 
-	// console.log('############ routes.js #############');
-    this.root('pages#main');
+	this.root('pages#main');	   
 
-	this.match('list/', 'pages#list');    
+	this.match('list/', 'pages#main');
+
+	this.match('show/', 'pages#show');
 
 	this.match('create/', 'pages#create', { via: 'POST' });          
 

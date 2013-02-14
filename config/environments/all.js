@@ -1,3 +1,6 @@
+
+// locomotive config
+
 var express = require('express')
   , poweredBy = require('connect-powered-by')
   , util = require('util')

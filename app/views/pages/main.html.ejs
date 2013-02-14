@@ -1,42 +1,39 @@
-<% layout('../layout.html') -%>
-<div class="page-header">
-  <h1>&nbsp;Check it out! <small>Awesome products!</small></h1>
-</div>
-<div ng-controller="ProductCtrl">
-	<form ng-submit="save(newRecord)">
-		<table class="table table-striped">
-			<tr>
-				<th>ID</th>
-				<th>Category</th>
-				<th>Title</th>	
-				<th>Google ID</th>	
-				<th>Action</th>	
-			</tr>	
-			<tr>
-				<th><input ng-model="newRecord.id" placeholder="ID"></th>
-				<th><input ng-model="newRecord.category" placeholder="Category"></th>
-				<th><input ng-model="newRecord.title" placeholder="Title"></th>	
-				<th><input ng-model="newRecord.google_id" placeholder="Google ID"></th>	
-				<th><input type="submit" value="Add"></th>	
-			</tr>
-			<tr ng-repeat="(index, row) in products">
-				<td>{{row.id}}</td>
-				<td>{{row.category}}</td>
-				<td>{{row.title}}</td>	
-				<td>{{row.google_id}}</td>	
-				<td><a ng-click="delete(index)">Delete</a></td>
-			</tr>	
-		</table>
-		<div align="center" class="pagination">
-		  <ul>
-		    <li><a href="#">Prev</a></li>
-		    <li><a href="#">1</a></li>
-		    <li><a href="#">2</a></li>
-		    <li><a href="#">3</a></li>
-		    <li><a href="#">4</a></li>
-		    <li><a href="#">5</a></li>
-		    <li><a href="#">Next</a></li>
-		  </ul>
-		</div>
-	</form>	
-</div>
+  <% layout('../layout.html') -%>
+     
+   <!-- Fixed navbar -->
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="/">Sample Project</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="/">Home</a></li>
+
+              <!--
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="nav-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+              -->
+
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Begin page content -->
+  <div class="container" ng-controller="MainCtrl" ng-view></div>  
