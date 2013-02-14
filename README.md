@@ -1,5 +1,5 @@
 
-  ##  Working with nodejs, mongodb, mvc and stuff. ##  
+  <h2>Working with nodejs, mongodb, mvc and stuff.</h2>  
 
 	This is a simple example of how to use locomotivejs with mongoose ejs, angularjs and twitter bootstrap.
 
