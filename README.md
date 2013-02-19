@@ -24,3 +24,5 @@
 		$ lcm server
 
 	5 - Open in a browser: http://localhost:3000/
+
+	Obs: In order to the twitter authentication example work, are required an registerd <a href='https://dev.twitter.com/'>twitter app.</a> 
