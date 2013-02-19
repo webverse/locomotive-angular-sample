@@ -25,4 +25,4 @@
 
 	5 - Open in a browser: http://localhost:3000/
 
-	Obs: In order to the twitter authentication example work, are required an registerd app at https://dev.twitter.com/
+	Obs: In order to the twitter authentication example work, are required an registered app at https://dev.twitter.com/
