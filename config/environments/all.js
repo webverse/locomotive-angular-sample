@@ -4,7 +4,9 @@
 var express = require('express')
   , poweredBy = require('connect-powered-by')
   , util = require('util')
-  , ejslocals = require('ejs-locals');
+  , ejslocals = require('ejs-locals')
+  , passport = require('passport');
+
 
 module.exports = function() {
   // Warn of version mismatch between global "lcm" binary and local installation
@@ -43,11 +45,29 @@ module.exports = function() {
   // Use middleware.  Standard [Connect](http://www.senchalabs.org/connect/)
   // middleware is built-in, with additional [third-party](https://github.com/senchalabs/connect/wiki)
   // middleware available as separate modules.
+
+
   this.use(poweredBy('Locomotive'));
+
+    // passport
+  this.use(passport.initialize());
+  this.use(passport.session());
+
+  // express
+  // format { format: '\x1b[1m:method\x1b[0m \x1b[33m:url\x1b[0m :response-time ms' }
   this.use(express.logger());
   this.use(express.favicon());
-  this.use(express.static(__dirname + '/../../public'));
+  this.use(express.static(__dirname + '/../../public'));  
   this.use(express.bodyParser());
+  this.use(express.cookieParser());
   this.use(express.methodOverride());
+  this.use(express.session( { secret: 'OLIQner4dEdlz3BRcfeXEXFQPnS2a0PxmWbzDezKL9IKF1IaA2O6nm_KsFVI9Yhx' } ) );
+
   this.use(this.router);
+
+  // 404's
+  this.use(function(req, res, next){
+    res.send(404, 'Sorry cant find that!');
+  });
+
 }
