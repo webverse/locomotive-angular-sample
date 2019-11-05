@@ -8,7 +8,7 @@
     "mongoose": "5.7.x",    
     "express": "3.x.x",
     "connect-powered-by": "0.1.x",
-    "ejs": "0.8.x",
+    "ejs": "2.7.x",
     "ejs-locals": "1.0.x",
     "passport": "0.1.x",
     "passport-twitter": "0.1.x"
